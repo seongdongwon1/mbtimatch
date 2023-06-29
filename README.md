@@ -1,25 +1,73 @@
-# MBTI 궁합도우미
+<<<<<<< HEAD
+# mbtimatch
 
-연인, 친구 그리고 나의 MBTI 성향을 알아보는 도우미 입니다! 😁
+## Build Setup
 
-<p align="right">2023.06.29</p>
+```bash
+# install dependencies
+$ npm install
 
-## INTRO
-```
-1. 친구, 연인 그리고 나 선택
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-2. 선택된 항목에 대한 MBTI 입력
-   - 없을 시 MBTI 측정 사이트 소개
-   
-3. 유저의 MBTI 성향 안내
-   - 솔로 시 성향안내
-   - 궁합 시 성향 및 궁합 안내
-   
-4. AI를 통한 오늘의 한마디
-   - 솔로면 운세느낌
-   - 궁합시 서로의 궁합 및 조심해야 될 점 등등..?
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
 ```
 
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+
+## Special Directories
+
+You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+
+### `assets`
+
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+
+### `components`
+
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+
+### `layouts`
+
+Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
 
+### `pages`
 
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+
+### `plugins`
+
+The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+
+### `static`
+
+This directory contains your static files. Each file inside this directory is mapped to `/`.
+
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+### `store`
+
+This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+=======
+test 2차
+>>>>>>> 7275c07ca5208350a55b3ad7f363163085496351

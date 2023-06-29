@@ -31,24 +31,53 @@
               :key="index"
               :idx="index"
             />
+            <!--            <div class="mbti-item item1">-->
+            <!--              <div class="card-inner" @click="flipCard($event)">-->
+            <!--                <div class="card-front">-->
+            <!--                  I-->
+            <!--                </div>-->
+            <!--                <div class="card-back">-->
+            <!--                  E-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            <div class="mbti-item item2">-->
+            <!--              <div class="card-inner" @click="flipCard($event)">-->
+            <!--                <div class="card-front">-->
+            <!--                  I-->
+            <!--                </div>-->
+            <!--                <div class="card-back">-->
+            <!--                  E-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            <div class="mbti-item item3">-->
+            <!--              <div class="card-inner" @click="flipCard($event)">-->
+            <!--                <div class="card-front">-->
+            <!--                  I-->
+            <!--                </div>-->
+            <!--                <div class="card-back">-->
+            <!--                  E-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            <div class="mbti-item item4">-->
+            <!--              <div class="card-inner" @click="flipCard($event)">-->
+            <!--                <div class="card-front">-->
+            <!--                  I-->
+            <!--                </div>-->
+            <!--                <div class="card-back">-->
+            <!--                  E-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
           </div>
         </div>
         <div v-else class="mbti-people">
           커플임
         </div>
       </div>
-      <div class="result">
-        <div class="result-btn">
-          <div
-            v-if="pSwitch == 'solo'"
-          >
-            내 성향보기
-          </div>
-          <div v-else>
-            궁합보기
-          </div>
-        </div>
-      </div>
+      <div class="result" />
       <div class="test" />
     </div>
   </div>
