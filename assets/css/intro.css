@@ -1,9 +1,32 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200");
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
 .match__container {
   width: 100%;
   height: 100vh;
   position: relative;
   background: #fff;
+  box-sizing: border-box;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 .match__container .contents {
   position: absolute;
@@ -92,38 +115,53 @@
   width: 80%;
   margin: 0 auto;
 }
+.match__container .contents .mbti .mbti-solo {
+  width: 100%;
+}
 .match__container .contents .mbti .mbti-solo .txt {
   font-size: 1.3rem;
 }
 .match__container .contents .mbti .mbti-solo .mbti-select {
+  margin-top: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
-.match__container .contents .mbti .mbti-solo .card-inner {
-  width: 100px;
-  height: 150px;
-  perspective: 800px;
-  cursor: pointer;
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item {
+  perspective: 1000px;
 }
-.match__container .contents .mbti .mbti-solo .card-inner .card-front,
-.match__container .contents .mbti .mbti-solo .card-inner .card-back {
-  position: absolute;
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item .card-inner {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item .card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item .card-inner .card-front,
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item .card-inner .card-back {
+  border-radius: 5px;
   width: 100%;
   height: 100%;
-  background-color: #F9F9F9;
-  color: #333;
+  position: absolute;
+  backface-visibility: hidden;
+  font-size: 2.5rem;
+}
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item .card-inner .card-front {
+  background-color: #e9e9e9;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
 }
-.match__container .contents .mbti .mbti-solo .card-inner .card-back {
-  background-color: #333;
-  color: #F9F9F9;
-  transform: rotateX(180deg);
+.match__container .contents .mbti .mbti-solo .mbti-select .mbti-item .card-inner .card-back {
+  background-color: #f2f2f2;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=intro.css.map */
