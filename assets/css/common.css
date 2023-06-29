@@ -5,8 +5,10 @@
   font-style: normal;
 }
 body, html {
+  min-width: 320px;
   max-width: 468px;
   margin: 0 auto;
+  height: 100%;
   font-family: "YanoljaYacheR";
 }
 

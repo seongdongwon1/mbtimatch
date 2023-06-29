@@ -6,10 +6,10 @@
       @click="flipCard"
     >
       <div class="card-front">
-        I
+        <span>{{ card[idx].front }}</span>
       </div>
       <div class="card-back">
-        E
+        <span>{{ card[idx].back }}</span>
       </div>
     </div>
   </div>
@@ -21,7 +21,25 @@ export default {
     props: ['idx'],
     data () {
         return {
-            isFlipped: false
+            isFlipped: false,
+            card: [
+                {
+                    front: 'I',
+                    back: 'E'
+                },
+                {
+                    front: 'N',
+                    back: 'S'
+                },
+                {
+                    front: 'F',
+                    back: 'T'
+                },
+                {
+                    front: 'P',
+                    back: 'J'
+                }
+            ]
         }
     },
     methods: {
