@@ -3,7 +3,7 @@
     <div
       class="card-inner"
       :class="{ flipped: isFlipped }"
-      @click="flipCard"
+      @click="flipCard()"
     >
       <div class="card-front">
         <span>{{ card[idx].front }}</span>

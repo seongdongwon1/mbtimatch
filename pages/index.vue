@@ -29,6 +29,7 @@
             <mbti-card
               v-for="(item, index) in 4"
               :key="index"
+              ref="mbtiCards"
               :idx="index"
             />
           </div>
@@ -41,6 +42,7 @@
         <div class="result-btn">
           <div
             v-if="pSwitch == 'solo'"
+            @click="soloResult"
           >
             내 성향보기
           </div>
@@ -55,6 +57,7 @@
 </template>
 
 <script>
+// import axios from 'axios'
 import MbtiCard from '~/components/MbtiCard'
 
 export default {
@@ -62,7 +65,8 @@ export default {
     components: { MbtiCard },
     data () {
         return {
-            pSwitch: 'people'
+            pSwitch: 'people',
+            resData: null
         }
     },
     methods: {
@@ -77,13 +81,27 @@ export default {
 
                 if (!frontText || !backText) { return }
 
-                // Swap the text content
                 const temp = frontText.textContent
                 frontText.textContent = backText.textContent
                 backText.textContent = temp
 
                 cardInner.style.transform = 'rotateX(0deg)'
             }, 600)
+        },
+        async soloResult () {
+            const cardInners = this.$refs.mbtiCards.map(card => card.isFlipped)
+            const firstCard = cardInners[0] === false ? 'I' : 'E'
+            const secondCard = cardInners[1] === false ? 'N' : 'S'
+            const thridCard = cardInners[2] === false ? 'F' : 'T'
+            const fourCard = cardInners[3] === false ? 'P' : 'J'
+            const sumCard = firstCard + secondCard + thridCard + fourCard
+            try {
+                const res = await this.$api.get('/', { params: { sumCard } })
+                this.resData = res.data
+                console.log('aaaa', this.resData)
+            } catch (err) {
+                console.error(err)
+            }
         }
     }
 }
